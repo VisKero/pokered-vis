@@ -3,7 +3,7 @@
 	db  55,  47,  52,  41,  40
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
+	db TOXIC_TYPE, TOXIC_TYPE ; type
 	db 235 ; catch rate
 	db 59 ; base exp
 
@@ -19,4 +19,5 @@
 	     REFLECT,      BIDE,         SKULL_BASH,   REST,         SUBSTITUTE
 	; end
 
-	db 0 ; padding
+	db BANK(NidoranFPicFront)
+	assert BANK(NidoranFPicFront) == BANK(NidoranFPicBack)

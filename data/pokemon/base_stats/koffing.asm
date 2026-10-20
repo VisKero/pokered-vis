@@ -3,7 +3,7 @@
 	db  40,  65,  95,  35,  60
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
+	db TOXIC_TYPE, TOXIC_TYPE ; type
 	db 190 ; catch rate
 	db 114 ; base exp
 
@@ -19,4 +19,5 @@
 	     EXPLOSION,    SUBSTITUTE
 	; end
 
-	db 0 ; padding
+	db BANK(KoffingPicFront)
+	assert BANK(KoffingPicFront) == BANK(KoffingPicBack)

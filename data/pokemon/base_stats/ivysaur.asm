@@ -3,7 +3,7 @@
 	db  60,  62,  63,  60,  80
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
+	db PLANT, TOXIC_TYPE ; type
 	db 45 ; catch rate
 	db 141 ; base exp
 
@@ -19,4 +19,5 @@
 	     REFLECT,      BIDE,         REST,         SUBSTITUTE,   CUT
 	; end
 
-	db 0 ; padding
+	db BANK(IvysaurPicFront)
+	assert BANK(IvysaurPicFront) == BANK(IvysaurPicBack)

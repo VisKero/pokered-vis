@@ -3,7 +3,7 @@
 	db  95,  95,  85,  55, 125
 	;   hp  atk  def  spd  spc
 
-	db GRASS, PSYCHIC_TYPE ; type
+	db PLANT, PSYCHIC_TYPE ; type
 	db 45 ; catch rate
 	db 212 ; base exp
 
@@ -20,4 +20,5 @@
 	     REST,         PSYWAVE,      EXPLOSION,    SUBSTITUTE,   STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(ExeggutorPicFront)
+	assert BANK(ExeggutorPicFront) == BANK(ExeggutorPicBack)

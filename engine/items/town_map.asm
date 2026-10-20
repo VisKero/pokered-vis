@@ -122,10 +122,13 @@ LoadTownMap_Nest:
 	push hl
 	call DisplayWildLocations
 	call GetMonName
-	hlcoord 1, 0
+	hlcoord 0, 0 ; edit to (1, 0) if want 1 blank space before pokemon name starts, as in English translation. 
+;	hlcoord 0, 1 ; use this for "NEST OF CHARMANDER" instead of "CHARMANDER'S NEST" (pokemon name will appear below NEST text)
 	call PlaceString
 	ld h, b
 	ld l, c
+	hlcoord 0, 1 ; move "'s NEST" text down one line, versus pokemon name which is at (0,0)
+;	hlcoord 0, 0 ; use this for "NEST OF CHARMANDER" instead of "CHARMANDER'S NEST"
 	ld de, MonsNestText
 	call PlaceString
 	call WaitForTextScrollButtonPress
@@ -136,7 +139,7 @@ LoadTownMap_Nest:
 	ret
 
 MonsNestText:
-	db "'s NEST@"
+	db "NEST@"
 
 LoadTownMap_Fly::
 	call ClearSprites

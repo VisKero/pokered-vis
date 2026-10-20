@@ -3,7 +3,7 @@
 	db  73,  76,  75, 100, 100
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
+	db FIRE, SPIRIT ; type
 	db 75 ; catch rate
 	db 178 ; base exp
 
@@ -20,4 +20,5 @@
 	     SUBSTITUTE
 	; end
 
-	db 0 ; padding
+	db BANK(NinetalesPicFront)
+	assert BANK(NinetalesPicFront) == BANK(NinetalesPicBack)

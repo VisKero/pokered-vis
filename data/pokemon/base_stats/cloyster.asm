@@ -3,7 +3,7 @@
 	db  50,  95, 180,  70,  85
 	;   hp  atk  def  spd  spc
 
-	db WATER, ICE ; type
+	db METAL, ICE ; type
 	db 60 ; catch rate
 	db 203 ; base exp
 
@@ -21,4 +21,5 @@
 	     SURF
 	; end
 
-	db 0 ; padding
+	db BANK(CloysterPicFront)
+	assert BANK(CloysterPicFront) == BANK(CloysterPicBack)

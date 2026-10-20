@@ -460,8 +460,8 @@ SFX_Go_Outside_1::
 
 SFX_Save_1::
 	channel_count 2
-	channel 5, SFX_Save_1_Ch5
-	channel 6, SFX_Save_1_Ch6
+	channel 5, SFX_Save_1_Ch4
+	channel 6, SFX_Save_1_Ch5
 
 ; the Pokeflute sound effect directly hijacks channel 3
 SFX_Pokeflute::

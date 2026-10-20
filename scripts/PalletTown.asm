@@ -133,7 +133,7 @@ PalletTownPlayerFollowsOakScript:
 PalletTownDaisyScript:
 	CheckEvent EVENT_DAISY_WALKING
 	jr nz, .next
-	CheckBothEventsSet EVENT_GOT_TOWN_MAP, EVENT_ENTERED_BLUES_HOUSE, 1
+	CheckBothEventsSet EVENT_GOT_TOWN_MAP, EVENT_ENTERED_GREENS_HOUSE, 1
 	jr nz, .next
 	SetEvent EVENT_DAISY_WALKING
 	ld a, TOGGLE_DAISY_SITTING

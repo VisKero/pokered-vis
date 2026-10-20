@@ -13,11 +13,11 @@ LeechSeedEffect_:
 .leechSeedEffect
 ; miss if the target is grass-type or already seeded
 	ld a, [de]
-	cp GRASS
+	cp PLANT
 	jr z, .moveMissed
 	inc de
 	ld a, [de]
-	cp GRASS
+	cp PLANT
 	jr z, .moveMissed
 	bit SEEDED, [hl]
 	jr nz, .moveMissed

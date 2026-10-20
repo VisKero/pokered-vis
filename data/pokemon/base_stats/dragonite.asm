@@ -3,7 +3,7 @@
 	db  91, 134,  95,  80, 100
 	;   hp  atk  def  spd  spc
 
-	db DRAGON, FLYING ; type
+	db MYSTIC, MYSTIC ; type
 	db 45 ; catch rate
 	db 218 ; base exp
 
@@ -22,4 +22,5 @@
 	     SURF,         STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(DragonitePicFront)
+	assert BANK(DragonitePicFront) == BANK(DragonitePicBack)

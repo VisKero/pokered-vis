@@ -3,7 +3,7 @@
 	db  75, 100, 110,  65,  55
 	;   hp  atk  def  spd  spc
 
-	db GROUND, GROUND ; type
+	db EARTH, EARTH ; type
 	db 90 ; catch rate
 	db 163 ; base exp
 
@@ -21,4 +21,5 @@
 	     CUT,          STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(SandslashPicFront)
+	assert BANK(SandslashPicFront) == BANK(SandslashPicBack)

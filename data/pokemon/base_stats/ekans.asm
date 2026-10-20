@@ -3,7 +3,7 @@
 	db  35,  60,  44,  55,  40
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
+	db TOXIC_TYPE, TOXIC_TYPE ; type
 	db 255 ; catch rate
 	db 62 ; base exp
 
@@ -20,4 +20,5 @@
 	     SUBSTITUTE,   STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(EkansPicFront)
+	assert BANK(EkansPicFront) == BANK(EkansPicBack)

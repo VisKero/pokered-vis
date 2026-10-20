@@ -3,7 +3,7 @@
 	db  50,  50,  95,  35,  40
 	;   hp  atk  def  spd  spc
 
-	db GROUND, GROUND ; type
+	db EARTH, EARTH ; type
 	db 190 ; catch rate
 	db 87 ; base exp
 
@@ -21,4 +21,5 @@
 	     FIRE_BLAST,   SKULL_BASH,   REST,         SUBSTITUTE,   STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(CubonePicFront)
+	assert BANK(CubonePicFront) == BANK(CubonePicBack)

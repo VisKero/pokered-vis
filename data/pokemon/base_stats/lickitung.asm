@@ -3,7 +3,7 @@
 	db  90,  55,  75,  30,  60
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, NORMAL ; type
+	db NORMAL, SPIRIT ; type
 	db 45 ; catch rate
 	db 127 ; base exp
 
@@ -22,4 +22,5 @@
 	     REST,         SUBSTITUTE,   CUT,          SURF,         STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(LickitungPicFront)
+	assert BANK(LickitungPicFront) == BANK(LickitungPicBack)

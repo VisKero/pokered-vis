@@ -3,7 +3,7 @@
 	db  41,  64,  45,  50,  50
 	;   hp  atk  def  spd  spc
 
-	db DRAGON, DRAGON ; type
+	db MYSTIC, MYSTIC ; type
 	db 45 ; catch rate
 	db 67 ; base exp
 
@@ -21,4 +21,5 @@
 	     THUNDER_WAVE, SUBSTITUTE,   SURF
 	; end
 
-	db 0 ; padding
+	db BANK(DratiniPicFront)
+	assert BANK(DratiniPicFront) == BANK(DratiniPicBack)

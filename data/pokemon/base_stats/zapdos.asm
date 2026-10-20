@@ -3,7 +3,7 @@
 	db  90,  90,  85, 100, 125
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, FLYING ; type
+	db ELECTRIC, WIND ; type
 	db 3 ; catch rate
 	db 216 ; base exp
 
@@ -20,4 +20,5 @@
 	     REST,         THUNDER_WAVE, SUBSTITUTE,   FLY,          FLASH
 	; end
 
-	db 0 ; padding
+	db BANK(ZapdosPicFront)
+	assert BANK(ZapdosPicFront) == BANK(ZapdosPicBack)

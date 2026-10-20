@@ -24,6 +24,7 @@ MonPartyData:
 	nybble ICON_BIRD      ; Fearow
 	nybble ICON_SNAKE     ; Ekans
 	nybble ICON_SNAKE     ; Arbok
+	nybble ICON_FAIRY     ; Pichu
 	nybble ICON_FAIRY     ; Pikachu
 	nybble ICON_FAIRY     ; Raichu
 	nybble ICON_MON       ; Sandshrew
@@ -34,14 +35,17 @@ MonPartyData:
 	nybble ICON_MON       ; NidoranM
 	nybble ICON_MON       ; Nidorino
 	nybble ICON_MON       ; Nidoking
+	nybble ICON_MON       ; Cleffa
 	nybble ICON_FAIRY     ; Clefairy
 	nybble ICON_FAIRY     ; Clefable
 	nybble ICON_QUADRUPED ; Vulpix
 	nybble ICON_QUADRUPED ; Ninetales
+	nybble ICON_FAIRY     ; Igglybuff
 	nybble ICON_FAIRY     ; Jigglypuff
 	nybble ICON_FAIRY     ; Wigglytuff
 	nybble ICON_MON       ; Zubat
 	nybble ICON_MON       ; Golbat
+	nybble ICON_MON       ; Crobat
 	nybble ICON_GRASS     ; Oddish
 	nybble ICON_GRASS     ; Gloom
 	nybble ICON_GRASS     ; Vileplume
@@ -57,6 +61,7 @@ MonPartyData:
 	nybble ICON_MON       ; Golduck
 	nybble ICON_MON       ; Mankey
 	nybble ICON_MON       ; Primeape
+	nybble ICON_MON       ; Annihilape
 	nybble ICON_QUADRUPED ; Growlithe
 	nybble ICON_QUADRUPED ; Arcanine
 	nybble ICON_MON       ; Poliwag
@@ -82,6 +87,7 @@ MonPartyData:
 	nybble ICON_MON       ; Slowbro
 	nybble ICON_BALL      ; Magnemite
 	nybble ICON_BALL      ; Magneton
+	nybble ICON_BALL      ; Magnezone
 	nybble ICON_BIRD      ; Farfetch'd
 	nybble ICON_BIRD      ; Doduo
 	nybble ICON_BIRD      ; Dodrio
@@ -149,6 +155,6 @@ MonPartyData:
 	nybble ICON_SNAKE     ; Dratini
 	nybble ICON_SNAKE     ; Dragonair
 	nybble ICON_SNAKE     ; Dragonite
-	nybble ICON_MON       ; Mewtwo
 	nybble ICON_MON       ; Mew
+	nybble ICON_MON       ; Mewtwo
 	end_nybble_array NUM_POKEMON

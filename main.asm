@@ -2,7 +2,6 @@ SECTION "bank1", ROMX
 
 INCLUDE "data/sprites/facings.asm"
 INCLUDE "engine/events/black_out.asm"
-INCLUDE "data/pokemon/mew.asm"
 INCLUDE "engine/battle/safari_zone.asm"
 INCLUDE "engine/movie/title.asm"
 INCLUDE "engine/pokemon/load_mon_data.asm"
@@ -174,7 +173,6 @@ INCLUDE "engine/battle/move_effects/one_hit_ko.asm"
 
 SECTION "Slot Machines", ROMX
 
-INCLUDE "engine/movie/title2.asm"
 INCLUDE "engine/battle/link_battle_versus_text.asm"
 INCLUDE "engine/slots/slot_machine.asm"
 INCLUDE "engine/events/pewter_guys.asm"
@@ -299,7 +297,7 @@ SECTION "Hidden Events 4", ROMX
 
 INCLUDE "engine/events/hidden_events/gym_statues.asm"
 INCLUDE "engine/events/hidden_events/bench_guys.asm"
-INCLUDE "engine/events/hidden_events/blues_room.asm"
+INCLUDE "engine/events/hidden_events/greens_room.asm"
 INCLUDE "engine/events/hidden_events/pokecenter_pc.asm"
 
 

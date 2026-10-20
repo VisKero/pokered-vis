@@ -3,7 +3,7 @@
 	db  90, 100,  90,  90, 125
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FLYING ; type
+	db FIRE, WIND ; type
 	db 3 ; catch rate
 	db 217 ; base exp
 
@@ -20,4 +20,5 @@
 	     SUBSTITUTE,   FLY
 	; end
 
-	db 0 ; padding
+	db BANK(MoltresPicFront)
+	assert BANK(MoltresPicFront) == BANK(MoltresPicBack)

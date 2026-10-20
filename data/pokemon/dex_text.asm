@@ -297,6 +297,26 @@ _TangelaDexEntry::
 	next "weed. Its vines"
 	next "shake as it walks"
 	dex
+	
+_PichuDexEntry::
+    text "It is unskilled at"
+    next "storing electric"
+    next "power. Any kind of"
+    
+    page "shock causes it to"
+    next "discharge energy"
+    next "spontaneously"
+    dex	
+    
+_CleffaDexEntry::
+    text "If the impact site"
+    next "of a meteor is"
+    next "found, this"
+    
+    page "#MON is certain"
+    next "to be within the"
+    next "immediate area"
+    dex
 
 _GrowlitheDexEntry::
 	text "Very protective"
@@ -467,6 +487,16 @@ _GolemDexEntry::
 	next "dynamite blasts"
 	next "without damage"
 	dex
+	
+_IgglybuffDexEntry::
+    text "Instead of walking"
+    next "with its short"
+    next "legs, it moves"
+    
+    page "around by bouncing"
+    next "on its soft,"
+    next "tender body"	
+    dex
 
 _MagmarDexEntry::
 	text "Its body always"
@@ -477,6 +507,16 @@ _MagmarDexEntry::
 	next "hide perfectly"
 	next "among flames"
 	dex
+	
+_CrobatDexEntry::
+	text "As a result of its"
+	next "pursuit of faster,"
+	next "yet more silent"
+	
+	page "flight, a new set"
+	next "of wings grew on"
+	next "its hind legs."
+	dex	
 
 _ElectabuzzDexEntry::
 	text "Normally found"
@@ -507,6 +547,16 @@ _KoffingDexEntry::
 	next "prone to exploding"
 	next "without warning"
 	dex
+	
+_AnnihilapeDexEntry::
+    text "Its anger rose"
+    next "behond a critical"
+    next "point and gained"
+    
+    page "power that is"
+    next "unfettered by"
+    next "its physical limit"
+    dex	
 
 _MankeyDexEntry::
 	text "Extremely quick to"
@@ -547,6 +597,16 @@ _TaurosDexEntry::
 	next "body with its"
 	next "long tails"
 	dex
+
+_MagnezoneDexEntry::
+    text "It evolved from"
+    next "exposure to a"
+    next "special magnetic"
+    
+    page "field. Three units"
+    next "generate"
+    next "magnetism"
+    dex
 
 _FarfetchdDexEntry::
 	text "The sprig of"

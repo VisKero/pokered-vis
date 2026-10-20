@@ -3,7 +3,7 @@
 	db  35,  85,  45,  75,  35
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, FLYING ; type
+	db EARTH, EARTH ; type
 	db 190 ; catch rate
 	db 96 ; base exp
 
@@ -20,4 +20,5 @@
 	     FLY
 	; end
 
-	db 0 ; padding
+	db BANK(DoduoPicFront)
+	assert BANK(DoduoPicFront) == BANK(DoduoPicBack)

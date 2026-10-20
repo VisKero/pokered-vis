@@ -2,6 +2,7 @@
 
 ; Control characters (see home/text.asm)
 
+	charmap "<LF>",		 $1f ; "line feed", used on town map names
 	charmap "<NULL>",    $00
 	charmap "<PAGE>",    $49
 	charmap "<PKMN>",    $4a ; "<PK><MN>"
@@ -75,8 +76,9 @@
 ; Actual characters (from other graphics files)
 
 	; needed for ShowPokedexDataInternal (see engine/menus/pokedex.asm)
-	charmap "′",         $60 ; gfx/pokedex/pokedex.png
-	charmap "″",         $61 ; gfx/pokedex/pokedex.png
+	charmap "<M>",       $60 ; gfx/pokedex/pokedex.png
+	charmap "<K>",       $61 ; gfx/pokedex/pokedex.png
+	charmap "<G>",       $62 ; gfx/pokedex/pokedex.png
 
 	; needed for StatusScreen (see engine/pokemon/status_screen.asm)
 	charmap "<BOLD_P>",  $72 ; gfx/font/P.1bpp
@@ -156,6 +158,18 @@
 	charmap "'s",        $bd
 	charmap "'t",        $be
 	charmap "'v",        $bf
+	
+	charmap "´",         $c0
+	charmap "^",         $c1
+	charmap "`",         $c2
+	charmap "~",         $c3
+	charmap "¨",         $c4
+	charmap "*1",        $c5 ; "j"
+	charmap "*2",        $c6 ; "i" e "l"
+
+	charmap "ç",         $c7
+	charmap "Ç",         $c8
+
 
 	charmap "'",         $e0
 	charmap "<PK>",      $e1

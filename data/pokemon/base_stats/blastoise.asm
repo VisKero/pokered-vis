@@ -3,7 +3,7 @@
 	db  79,  83, 100,  78,  85
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
+	db WATER, METAL ; type
 	db 45 ; catch rate
 	db 210 ; base exp
 
@@ -22,4 +22,5 @@
 	     SURF,         STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(BlastoisePicFront)
+	assert BANK(BlastoisePicFront) == BANK(BlastoisePicBack)

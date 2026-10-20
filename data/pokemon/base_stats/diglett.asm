@@ -3,7 +3,7 @@
 	db  10,  55,  25,  95,  45
 	;   hp  atk  def  spd  spc
 
-	db GROUND, GROUND ; type
+	db EARTH, EARTH ; type
 	db 255 ; catch rate
 	db 81 ; base exp
 
@@ -19,4 +19,5 @@
 	     BIDE,         REST,         ROCK_SLIDE,   SUBSTITUTE
 	; end
 
-	db 0 ; padding
+	db BANK(DiglettPicFront)
+	assert BANK(DiglettPicFront) == BANK(DiglettPicBack)

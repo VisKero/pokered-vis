@@ -3,7 +3,7 @@
 	db  90, 110,  80,  95,  80
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
+	db FIRE, MYSTIC ; type
 	db 75 ; catch rate
 	db 213 ; base exp
 
@@ -20,4 +20,5 @@
 	     SKULL_BASH,   REST,         SUBSTITUTE
 	; end
 
-	db 0 ; padding
+	db BANK(ArcaninePicFront)
+	assert BANK(ArcaninePicFront) == BANK(ArcaninePicBack)

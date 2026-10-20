@@ -3,7 +3,7 @@
 	db  90,  85, 100,  85, 125
 	;   hp  atk  def  spd  spc
 
-	db ICE, FLYING ; type
+	db ICE, WIND ; type
 	db 3 ; catch rate
 	db 215 ; base exp
 
@@ -20,4 +20,5 @@
 	     SWIFT,        SKY_ATTACK,   REST,         SUBSTITUTE,   FLY
 	; end
 
-	db 0 ; padding
+	db BANK(ArticunoPicFront)
+	assert BANK(ArticunoPicFront) == BANK(ArticunoPicBack)

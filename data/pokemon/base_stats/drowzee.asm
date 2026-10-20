@@ -3,7 +3,7 @@
 	db  60,  48,  45,  42,  90
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
+	db PSYCHIC_TYPE, SHADOW ; type
 	db 190 ; catch rate
 	db 102 ; base exp
 
@@ -21,4 +21,5 @@
 	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   FLASH
 	; end
 
-	db 0 ; padding
+	db BANK(DrowzeePicFront)
+	assert BANK(DrowzeePicFront) == BANK(DrowzeePicBack)

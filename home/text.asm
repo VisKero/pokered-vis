@@ -59,12 +59,15 @@ PlaceNextChar::
 	ret
 
 .NotTerminator
+	cp "<LF>" ; used on town map for names
+	jr z, .line_feed
 	cp '<NEXT>'
 	jr nz, .NotNext
 	ld bc, 2 * SCREEN_WIDTH
 	ldh a, [hUILayoutFlags]
 	bit BIT_SINGLE_SPACED_LINES, a
 	jr z, .ok
+	.line_feed
 	ld bc, SCREEN_WIDTH
 .ok
 	pop hl
@@ -103,6 +106,29 @@ PlaceNextChar::
 	dict '<DEXEND>',  PlaceDexEnd
 	dict '<TARGET>',  PlaceMoveTargetsName
 	dict '<USER>',    PlaceMoveUsersName
+	
+	cp "´"
+	jr z, .placeCombiningChar
+	cp "^"
+	jr z, .placeCombiningChar
+	cp "`"
+	jr z, .placeCombiningChar
+	cp "~"
+	jr z, .placeCombiningChar
+	cp "*1" ; ponto do "j"
+	jr z, .placeCombiningChar
+	cp "*2" ; ponto do "i" e "l"
+	jr z, .placeCombiningChar
+	cp "¨"
+	jr nz, .placeChar
+.placeCombiningChar
+	push hl
+	ld bc, -SCREEN_WIDTH
+	add hl, bc
+	ld [hl], a
+	pop hl
+	jr NextChar
+.placeChar
 
 	ld [hli], a
 	call PrintLetterDelay

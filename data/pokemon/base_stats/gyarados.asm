@@ -3,7 +3,7 @@
 	db  95, 125,  79,  81, 100
 	;   hp  atk  def  spd  spc
 
-	db WATER, FLYING ; type
+	db WATER, MYSTIC ; type
 	db 45 ; catch rate
 	db 214 ; base exp
 
@@ -21,4 +21,5 @@
 	     SUBSTITUTE,   SURF,         STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(GyaradosPicFront)
+	assert BANK(GyaradosPicFront) == BANK(GyaradosPicBack)

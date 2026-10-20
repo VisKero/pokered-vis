@@ -3,7 +3,7 @@
 	db  81,  92,  77,  85,  75
 	;   hp  atk  def  spd  spc
 
-	db POISON, GROUND ; type
+	db TOXIC_TYPE, EARTH ; type
 	db 45 ; catch rate
 	db 195 ; base exp
 
@@ -23,4 +23,5 @@
 	     SURF,         STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(NidokingPicFront)
+	assert BANK(NidokingPicFront) == BANK(NidokingPicBack)

@@ -3,7 +3,7 @@
 	db  65,  90,  50,  55,  85
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
+	db PLANT, TOXIC_TYPE ; type
 	db 120 ; catch rate
 	db 151 ; base exp
 
@@ -19,4 +19,5 @@
 	     BIDE,         REST,         SUBSTITUTE,   CUT
 	; end
 
-	db 0 ; padding
+	db BANK(WeepinbellPicFront)
+	assert BANK(WeepinbellPicFront) == BANK(WeepinbellPicBack)

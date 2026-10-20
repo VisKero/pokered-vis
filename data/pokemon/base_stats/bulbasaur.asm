@@ -3,7 +3,7 @@
 	db  45,  49,  49,  45,  65
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
+	db PLANT, PLANT ; type
 	db 45 ; catch rate
 	db 64 ; base exp
 
@@ -19,4 +19,5 @@
 	     REFLECT,      BIDE,         REST,         SUBSTITUTE,   CUT
 	; end
 
-	db 0 ; padding
+	db BANK(BulbasaurPicFront)
+	assert BANK(BulbasaurPicFront) == BANK(BulbasaurPicBack)

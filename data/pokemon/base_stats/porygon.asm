@@ -3,7 +3,7 @@
 	db  65,  60,  70,  40,  75
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, NORMAL ; type
+	db CYBER, CYBER ; type
 	db 45 ; catch rate
 	db 130 ; base exp
 
@@ -21,4 +21,5 @@
 	     TRI_ATTACK,   SUBSTITUTE,   FLASH
 	; end
 
-	db 0 ; padding
+	db BANK(PorygonPicFront)
+	assert BANK(PorygonPicFront) == BANK(PorygonPicBack)

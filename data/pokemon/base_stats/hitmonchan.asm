@@ -3,7 +3,7 @@
 	db  50, 105,  79,  76,  35
 	;   hp  atk  def  spd  spc
 
-	db FIGHTING, FIGHTING ; type
+	db MARTIAL, MARTIAL ; type
 	db 45 ; catch rate
 	db 140 ; base exp
 
@@ -20,4 +20,5 @@
 	     SKULL_BASH,   REST,         SUBSTITUTE,   STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(HitmonchanPicFront)
+	assert BANK(HitmonchanPicFront) == BANK(HitmonchanPicBack)

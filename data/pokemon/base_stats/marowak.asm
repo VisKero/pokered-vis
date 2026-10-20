@@ -3,7 +3,7 @@
 	db  60,  80, 110,  45,  50
 	;   hp  atk  def  spd  spc
 
-	db GROUND, GROUND ; type
+	db EARTH, SPIRIT ; type
 	db 75 ; catch rate
 	db 124 ; base exp
 
@@ -22,4 +22,5 @@
 	     STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(MarowakPicFront)
+	assert BANK(MarowakPicFront) == BANK(MarowakPicBack)

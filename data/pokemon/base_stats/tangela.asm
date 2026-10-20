@@ -3,7 +3,7 @@
 	db  65,  55, 115,  60, 100
 	;   hp  atk  def  spd  spc
 
-	db GRASS, GRASS ; type
+	db PLANT, PLANT ; type
 	db 45 ; catch rate
 	db 166 ; base exp
 
@@ -20,4 +20,5 @@
 	     CUT
 	; end
 
-	db 0 ; padding
+	db BANK(TangelaPicFront)
+	assert BANK(TangelaPicFront) == BANK(TangelaPicBack)

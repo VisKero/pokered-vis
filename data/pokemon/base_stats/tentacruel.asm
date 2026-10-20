@@ -3,7 +3,7 @@
 	db  80,  70,  65, 100, 120
 	;   hp  atk  def  spd  spc
 
-	db WATER, POISON ; type
+	db WATER, TOXIC_TYPE ; type
 	db 60 ; catch rate
 	db 205 ; base exp
 
@@ -20,4 +20,5 @@
 	     SKULL_BASH,   REST,         SUBSTITUTE,   CUT,          SURF
 	; end
 
-	db 0 ; padding
+	db BANK(TentacruelPicFront)
+	assert BANK(TentacruelPicFront) == BANK(TentacruelPicBack)

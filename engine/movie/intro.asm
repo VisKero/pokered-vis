@@ -138,7 +138,9 @@ PlayIntroScene:
 	ld a, (FightIntroFrontMon3 - FightIntroFrontMon) / TILE_SIZE
 	ld [wIntroNidorinoBaseTile], a
 	ld de, IntroNidorinoAnimation7
-	jp AnimateIntroNidorino
+	call AnimateIntroNidorino
+	ld c, 80
+	jp CheckForUserInterruption
 
 AnimateIntroNidorino:
 	ld a, [de]
@@ -327,6 +329,15 @@ PlayShootingStar:
 	; A `call LoadPresentsGraphic` here was removed in localization
 	pop af
 	jr c, .next ; skip the delay if the user interrupted the animation
+       hlcoord 7, 11   ; starting coordinate
+       ld a, $67       ; starting tile ID
+       ld c, $06       ; number of tiles
+.loop
+       ld [hli], a
+       inc a
+       dec c
+       jr nz, .loop
+
 	ld c, 40
 	call DelayFrames
 .next
@@ -447,23 +458,21 @@ FightIntroBackMon:
 	ds TILE_SIZE, $00 ; blank tile
 FightIntroBackMonEnd:
 
-IF DEF(_RED)
 FightIntroFrontMon:
 	INCBIN "gfx/intro/red_nidorino_1.2bpp"
 FightIntroFrontMon2:
 	INCBIN "gfx/intro/red_nidorino_2.2bpp"
 FightIntroFrontMon3:
 	INCBIN "gfx/intro/red_nidorino_3.2bpp"
-ENDC
 
-IF DEF(_BLUE)
-FightIntroFrontMon:
-	INCBIN "gfx/intro/blue_jigglypuff_1.2bpp"
-FightIntroFrontMon2:
-	INCBIN "gfx/intro/blue_jigglypuff_2.2bpp"
-FightIntroFrontMon3:
-	INCBIN "gfx/intro/blue_jigglypuff_3.2bpp"
-ENDC
+; IF DEF(_BLUE)
+; FightIntroFrontMon:
+; 	INCBIN "gfx/intro/blue_jigglypuff_1.2bpp"
+; FightIntroFrontMon2:
+; 	INCBIN "gfx/intro/blue_jigglypuff_2.2bpp"
+; FightIntroFrontMon3:
+; 	INCBIN "gfx/intro/blue_jigglypuff_3.2bpp"
+; ENDC
 
 FightIntroFrontMonEnd:
 

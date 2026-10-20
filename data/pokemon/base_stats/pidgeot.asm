@@ -3,7 +3,7 @@
 	db  83,  80,  75,  91,  70
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, FLYING ; type
+	db NORMAL, WIND ; type
 	db 45 ; catch rate
 	db 172 ; base exp
 
@@ -20,4 +20,5 @@
 	     FLY
 	; end
 
-	db 0 ; padding
+	db BANK(PidgeotPicFront)
+	assert BANK(PidgeotPicFront) == BANK(PidgeotPicBack)

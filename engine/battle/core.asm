@@ -4578,7 +4578,7 @@ HandleCounterMove:
 	ld a, [de]
 	and a ; normal type
 	jr z, .counterableType
-	cp FIGHTING
+	cp MARTIAL
 	jr z, .counterableType
 ; if the move wasn't Normal or Fighting type, miss
 	xor a
@@ -6619,10 +6619,10 @@ HandleExplodingAnimation:
 	bit INVULNERABLE, a ; fly/dig
 	ret nz
 	ld a, [hli]
-	cp GHOST
+	cp SPIRIT
 	ret z
 	ld a, [hl]
-	cp GHOST
+	cp SPIRIT
 	ret z
 	ld a, [wMoveMissed]
 	and a

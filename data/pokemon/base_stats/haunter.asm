@@ -3,7 +3,7 @@
 	db  45,  50,  45,  95, 115
 	;   hp  atk  def  spd  spc
 
-	db GHOST, POISON ; type
+	db SPIRIT, SHADOW ; type
 	db 90 ; catch rate
 	db 126 ; base exp
 
@@ -19,4 +19,5 @@
 	     DREAM_EATER,  REST,         PSYWAVE,      EXPLOSION,    SUBSTITUTE
 	; end
 
-	db 0 ; padding
+	db BANK(HaunterPicFront)
+	assert BANK(HaunterPicFront) == BANK(HaunterPicBack)

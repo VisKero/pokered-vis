@@ -3,7 +3,7 @@
 	db  85,  73,  70,  67, 115
 	;   hp  atk  def  spd  spc
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
+	db PSYCHIC_TYPE, SHADOW ; type
 	db 75 ; catch rate
 	db 165 ; base exp
 
@@ -22,4 +22,5 @@
 	     FLASH
 	; end
 
-	db 0 ; padding
+	db BANK(HypnoPicFront)
+	assert BANK(HypnoPicFront) == BANK(HypnoPicBack)

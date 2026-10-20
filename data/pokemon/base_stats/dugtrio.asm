@@ -3,7 +3,7 @@
 	db  35,  80,  50, 120,  70
 	;   hp  atk  def  spd  spc
 
-	db GROUND, GROUND ; type
+	db EARTH, EARTH ; type
 	db 50 ; catch rate
 	db 153 ; base exp
 
@@ -19,4 +19,5 @@
 	     DOUBLE_TEAM,  BIDE,         REST,         ROCK_SLIDE,   SUBSTITUTE
 	; end
 
-	db 0 ; padding
+	db BANK(DugtrioPicFront)
+	assert BANK(DugtrioPicFront) == BANK(DugtrioPicBack)

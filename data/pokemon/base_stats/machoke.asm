@@ -3,7 +3,7 @@
 	db  80, 100,  70,  45,  50
 	;   hp  atk  def  spd  spc
 
-	db FIGHTING, FIGHTING ; type
+	db MARTIAL, MARTIAL ; type
 	db 90 ; catch rate
 	db 146 ; base exp
 
@@ -21,4 +21,5 @@
 	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(MachokePicFront)
+	assert BANK(MachokePicFront) == BANK(MachokePicBack)

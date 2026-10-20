@@ -3,7 +3,7 @@
 	db  30,  65, 100,  40,  45
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
+	db METAL, METAL ; type
 	db 190 ; catch rate
 	db 97 ; base exp
 
@@ -20,4 +20,5 @@
 	     REST,         EXPLOSION,    TRI_ATTACK,   SUBSTITUTE,   SURF
 	; end
 
-	db 0 ; padding
+	db BANK(ShellderPicFront)
+	assert BANK(ShellderPicFront) == BANK(ShellderPicBack)

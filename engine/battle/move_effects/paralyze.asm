@@ -18,11 +18,11 @@ ParalyzeEffect_:
 	ld c, l
 	inc bc
 	ld a, [bc]
-	cp GROUND
+	cp EARTH
 	jr z, .doesntAffect
 	inc bc
 	ld a, [bc]
-	cp GROUND
+	cp EARTH
 	jr z, .doesntAffect
 .hitTest
 	push hl

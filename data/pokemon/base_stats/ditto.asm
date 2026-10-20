@@ -3,7 +3,7 @@
 	db  48,  48,  48,  48,  48
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, NORMAL ; type
+	db CYBER, CYBER ; type
 	db 35 ; catch rate
 	db 61 ; base exp
 
@@ -17,4 +17,5 @@
 	tmhm
 	; end
 
-	db 0 ; padding
+	db BANK(DittoPicFront)
+	assert BANK(DittoPicFront) == BANK(DittoPicBack)

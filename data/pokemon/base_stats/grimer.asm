@@ -3,7 +3,7 @@
 	db  80,  80,  50,  25,  40
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
+	db TOXIC_TYPE, TOXIC_TYPE ; type
 	db 190 ; catch rate
 	db 90 ; base exp
 
@@ -19,4 +19,5 @@
 	     FIRE_BLAST,   REST,         EXPLOSION,    SUBSTITUTE
 	; end
 
-	db 0 ; padding
+	db BANK(GrimerPicFront)
+	assert BANK(GrimerPicFront) == BANK(GrimerPicBack)

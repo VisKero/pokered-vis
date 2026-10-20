@@ -55,6 +55,6 @@ INCLUDE "constants/menu_constants.asm"
 IF DEF(_RED_VC)
 INCLUDE "vc/pokered.constants.asm"
 ENDC
-IF DEF(_BLUE_VC)
-INCLUDE "vc/pokeblue.constants.asm"
+IF DEF(_GREEN_VC)
+INCLUDE "vc/pokegreen.constants.asm"
 ENDC

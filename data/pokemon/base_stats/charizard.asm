@@ -3,7 +3,7 @@
 	db  78,  84,  78, 100,  85
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FLYING ; type
+	db FIRE, WIND ; type
 	db 45 ; catch rate
 	db 209 ; base exp
 
@@ -22,4 +22,5 @@
 	     CUT,          STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(CharizardPicFront)
+	assert BANK(CharizardPicFront) == BANK(CharizardPicBack)

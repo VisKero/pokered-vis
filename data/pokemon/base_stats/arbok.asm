@@ -3,7 +3,7 @@
 	db  60,  85,  69,  80,  65
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
+	db TOXIC_TYPE, SHADOW ; type
 	db 90 ; catch rate
 	db 147 ; base exp
 
@@ -20,4 +20,5 @@
 	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	db 0 ; padding
+	db BANK(ArbokPicFront)
+	assert BANK(ArbokPicFront) == BANK(ArbokPicBack)

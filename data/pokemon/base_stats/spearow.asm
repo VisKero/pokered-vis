@@ -3,7 +3,7 @@
 	db  40,  60,  30,  70,  31
 	;   hp  atk  def  spd  spc
 
-	db NORMAL, FLYING ; type
+	db NORMAL, WIND ; type
 	db 255 ; catch rate
 	db 58 ; base exp
 
@@ -19,4 +19,5 @@
 	     SKY_ATTACK,   REST,         SUBSTITUTE,   FLY
 	; end
 
-	db 0 ; padding
+	db BANK(SpearowPicFront)
+	assert BANK(SpearowPicFront) == BANK(SpearowPicBack)
